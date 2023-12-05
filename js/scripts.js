@@ -26,6 +26,7 @@ dallo screenshot fornito in consegna.
 let numbers;
 
 const myElements = document.getElementById('elements');
+myElements.classList.add('row');
 
 for (numbers =1; numbers <=100; numbers++){
     
@@ -34,12 +35,14 @@ for (numbers =1; numbers <=100; numbers++){
         let myDiv = document.createElement('div');
         myDiv.append(`FizzBuzz`);
         myElements.append(myDiv);
+        myDiv.classList.add('bg-warning' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
     }
     else if (numbers % 3 == 0){
         console.log('fizz');
         let myDiv = document.createElement('div');
         myDiv.append(`fizz`);
         myElements.append(myDiv);
+        myDiv.classList.add('bg-success' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
         
     }
     else if (numbers % 5 == 0){
@@ -47,6 +50,7 @@ for (numbers =1; numbers <=100; numbers++){
         let myDiv = document.createElement('div');
         myDiv.append(`buzz`);
         myElements.append(myDiv);
+        myDiv.classList.add('bg-danger' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
         
     }
     else{
@@ -54,6 +58,7 @@ for (numbers =1; numbers <=100; numbers++){
         let myDiv = document.createElement('div');
         myDiv.append(numbers);
         myElements.append(myDiv);
+        myDiv.classList.add('bg-info' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
         
     }
     
