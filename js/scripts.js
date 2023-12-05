@@ -26,12 +26,12 @@ dallo screenshot fornito in consegna.
 let numbers;
 
 const myElements = document.getElementById('elements');
-myElements.classList.add('row');
+myElements.classList.add('row', 'justify-content-center');
 
 for (numbers =1; numbers <=100; numbers++){
 
     let myDiv = document.createElement('div');
-    myDiv.classList.add('col-1' , 'height-50', 'rounded-5', 'm-3');
+    myDiv.classList.add('col-1' , 'height-110', 'rounded-5', 'm-3', 'd-flex', 'justify-content-center','align-items-center' );
     
     if ((numbers % 3 == 0) && (numbers % 5 == 0)){
         console.log('FizzBuzz');
@@ -55,7 +55,7 @@ for (numbers =1; numbers <=100; numbers++){
     else{
         console.log(numbers);
         myDiv.append(numbers);
-        myDiv.classList.add('bg-info');
+        myDiv.classList.add('bg-primary');
         
     }
     
