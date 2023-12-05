@@ -29,38 +29,38 @@ const myElements = document.getElementById('elements');
 myElements.classList.add('row');
 
 for (numbers =1; numbers <=100; numbers++){
+
+    let myDiv = document.createElement('div');
+    myDiv.classList.add('col-1' , 'height-50', 'rounded-4', 'm-3');
     
     if ((numbers % 3 == 0) && (numbers % 5 == 0)){
         console.log('FizzBuzz');
-        let myDiv = document.createElement('div');
         myDiv.append(`FizzBuzz`);
-        myElements.append(myDiv);
-        myDiv.classList.add('bg-warning' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
+        myDiv.classList.add('bg-warning');
     }
     else if (numbers % 3 == 0){
         console.log('fizz');
-        let myDiv = document.createElement('div');
         myDiv.append(`fizz`);
-        myElements.append(myDiv);
-        myDiv.classList.add('bg-success' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
+        myDiv.classList.add('bg-success');
         
     }
+        
     else if (numbers % 5 == 0){
         console.log('buzz');
-        let myDiv = document.createElement('div');
         myDiv.append(`buzz`);
-        myElements.append(myDiv);
-        myDiv.classList.add('bg-danger' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
+        myDiv.classList.add('bg-danger');
         
     }
+        
     else{
         console.log(numbers);
-        let myDiv = document.createElement('div');
         myDiv.append(numbers);
-        myElements.append(myDiv);
-        myDiv.classList.add('bg-info' ,'col-1' , 'height-50', 'rounded-4', 'm-3');
+        myDiv.classList.add('bg-info');
         
     }
+    
+    myElements.append(myDiv);
+
     
 }
 
