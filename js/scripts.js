@@ -24,21 +24,42 @@ dallo screenshot fornito in consegna.
 */
 
 let numbers;
+
+const myElements = document.getElementById('elements');
+
 for (numbers =1; numbers <=100; numbers++){
     
     if ((numbers % 3 == 0) && (numbers % 5 == 0)){
         console.log('FizzBuzz');
+        let myDiv = document.createElement('div');
+        myDiv.append(`FizzBuzz`);
+        myElements.append(myDiv);
     }
     else if (numbers % 3 == 0){
         console.log('fizz');
+        let myDiv = document.createElement('div');
+        myDiv.append(`fizz`);
+        myElements.append(myDiv);
+        
     }
     else if (numbers % 5 == 0){
         console.log('buzz');
+        let myDiv = document.createElement('div');
+        myDiv.append(`buzz`);
+        myElements.append(myDiv);
+        
     }
     else{
         console.log(numbers);
+        let myDiv = document.createElement('div');
+        myDiv.append(numbers);
+        myElements.append(myDiv);
+        
     }
     
 }
+
+
+
 
 
